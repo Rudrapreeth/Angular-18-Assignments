@@ -1,6 +1,6 @@
-# Angular 18 Feature
+# Angular 18 Assignments
 
-This repository contains Angular 18 feature demonstrations organized by core concepts. Built and tested using **Visual Studio Code**, this project is ideal for learning and practicing fundamental Angular features including component communication, data binding, directives, forms, routing, and more.
+This repository contains Angular 18 features organized by core concepts. Built and tested using **Visual Studio Code**, this project is ideal for learning and practicing fundamental Angular features including component communication, data binding, directives, forms, routing, and more.
 
 ## 📁 Folder Structure
 
