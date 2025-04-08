@@ -1,0 +1,29 @@
+<section class="lifecycle-demo">
+    <header>
+      <h2>Angular 18 Lifecycle Hooks</h2>
+    </header>
+    <main>
+      <p>Current Count: <strong>{{ counter() }}</strong></p>
+      <div class="buttons">
+        <button (click)="increment()">Increase Count</button>
+        <button (click)="destroyComponent()">Remove Component</button>
+      </div>
+      <article *ngIf="componentDestroyed" class="destroyed-message">
+        <p>The component has been removed.</p>
+      </article>
+    </main>
+    
+    <section class="lifecycle-hooks">
+      <h3>Lifecycle Hooks Execution</h3>
+      <ul>
+        <li>ngOnChanges: Triggers when input properties change.</li>
+        <li>ngOnInit: Runs after component initialization.</li>
+        <li>ngDoCheck: Runs during every change detection cycle.</li>
+        <li>ngAfterContentInit: Executes after content projection.</li>
+        <li>ngAfterContentChecked: Runs after projected content is checked.</li>
+        <li>ngAfterViewInit: Executes after component's view initializes.</li>
+        <li>ngAfterViewChecked: Runs after the component’s view is checked.</li>
+        <li>ngOnDestroy: Executes when component is about to be destroyed.</li>
+      </ul>
+    </section>
+  </section>
