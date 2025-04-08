@@ -1,0 +1,80 @@
+<div class="container">
+  <h2>Reactive Form</h2>
+
+  <!--Reactive Form-->
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">First Name:</label>
+    <input id="firstName" formControlName="firstName" />
+    <div *ngIf="userForm.controls.firstName.invalid && userForm.controls.firstName.touched">
+      <small>First Name is required</small>
+    </div>
+
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" formControlName="lastName" />
+    <div *ngIf="userForm.controls.lastName.invalid && userForm.controls.lastName.touched">
+      <small>Last Name is required</small>
+    </div>
+
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" />
+    <div *ngIf="userForm.controls.email.invalid && userForm.controls.email.touched">
+      <small>Valid Email is required</small>
+    </div>
+
+    <label for="age">Age:</label>
+    <input id="age" formControlName="age" type="number" />
+    <div *ngIf="userForm.controls.age.invalid && userForm.controls.age.touched">
+      <small>Age is required (min: 1)</small>
+    </div>
+
+    <!-- Toggle Hobbies Section -->
+    <label for="toggleHobbies" class="checkbox-label">
+      Do you have hobbies?
+      <input id="toggleHobbies" type="checkbox" (change)="showHobbies = !showHobbies" />
+    </label>
+
+    <div *ngIf="showHobbies">
+      <button type="button" (click)="addHobby()" style="background-color: navy; color: white;">Add Hobby</button>
+      <label>Hobbies:</label>
+      <div formArrayName="hobbies">
+        <div *ngFor="let hobby of hobbies.controls; let i = index">
+          <input [formControlName]="i" placeholder="Enter Hobby" />
+          <button type="button" (click)="removeHobby(i)" style="background-color: maroon; color: white;">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <button type="submit" [disabled]="userForm.invalid" style="background-color: green; color: white;">Submit</button>
+    <br>
+    <button type="button" (click)="onReset()" style="background-color: gray; color: white;">Reset</button>
+  </form>
+
+  <!--Saved Users List-->
+  <h3>Saved Users: {{ savedUsers.length }}</h3>
+  <ul *ngIf="savedUsers.length > 0; else noUsers">
+    <li *ngFor="let user of savedUsers; let i=index">
+      <strong>Main Details:</strong> {{ user.firstName }} {{ user.lastName }} ({{ user.email }}, Age: {{ user.age }})
+      <br>
+      <strong>Hobbies:</strong> {{ user.hobbies.length > 0 ? user.hobbies.join(', ') : 'No hobbies added' }}
+      <button (click)="removeSavedUser(i)" style="background-color: red; color: white;">Remove</button>
+    </li>
+  </ul>
+
+  <!--Message when no users are saved-->
+  <div>
+    <ng-template #noUsers>
+      <p>No users saved yet.</p>
+    </ng-template>
+  </div>
+
+  <!--"Clear All" Button-->
+  <button *ngIf="savedUsers.length > 0" (click)="onClearAll()" style="background-color: darkorange; color: white;">Clear All</button>
+
+  <!--Notification-->
+  <div *ngIf="notification" class="notification">
+    {{ notification }}
+  </div>
+</div>
+
+

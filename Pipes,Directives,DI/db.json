@@ -1,0 +1,18 @@
+{
+    "users": [
+      { "name": "Liam", "salary": 20000, "joinedDate": "2025-03-01" },
+      { "name": "Yuki", "salary": 10000, "joinedDate": "2025-03-02" },
+      { "name": "Lewis", "salary": 30000, "joinedDate": "2025-03-03" },
+      { "name": "Alex", "salary": 40000, "joinedDate": "2025-03-04" },
+      { "name": "Leclerc", "salary": 50000, "joinedDate": "2025-03-05" },
+      { "name": "Ash", "salary": 25000, "joinedDate": "2025-04-03" },
+      { "name": "Ray", "salary": 30000, "joinedDate": "2025-03-04" },
+      { "name": "Zhou", "salary": 40000, "joinedDate": "2025-03-03" },
+      { "name": "Fernando", "salary": 30000, "joinedDate": "2025-03-03" },
+      { "name": "Valtteri", "salary": 40000, "joinedDate": "2025-03-04" },
+      { "name": "Pastor", "salary": 50000, "joinedDate": "2025-03-05" },
+      { "name": "Kamui", "salary": 25000, "joinedDate": "2025-04-03" },
+      { "name": "Kai", "salary": 30000, "joinedDate": "2025-03-04" }
+    ]
+  }
+  

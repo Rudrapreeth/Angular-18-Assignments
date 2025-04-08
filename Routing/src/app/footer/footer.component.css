@@ -1,0 +1,31 @@
+.footer {
+    position: fixed;  /* Fix the footer at the bottom */
+    bottom: 0;        /* Align it to the bottom */
+    left: 0;
+    width: 100%;      /* Full width */
+    background-color: #333; /* Dark background */
+    color: #fff;      /* White text */
+    text-align: center;  /* Center the text */
+    font-size: 12px;   /* Small font size */
+    padding: 10px 0;   /* Some padding for space */
+  }
+  
+  .footer ul {
+    list-style: none;  /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .footer ul li {
+    display: inline-block; /* Display links inline */
+    margin-right: 15px;  /* Space between links */
+  }
+  
+  .footer a {
+    color: #fff;      /* White color for links */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;  /* Underline on hover */
+  }
+  

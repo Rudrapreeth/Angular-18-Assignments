@@ -1,0 +1,44 @@
+/*Styling for the user list container */
+.user-list {
+    display: flex;
+    flex-wrap: wrap; /*Allows wrapping into multiple rows */
+    gap: 20px;
+    justify-content: center; /* Centers items */
+    padding: 10px;
+  }
+  
+  /* Individual user styling */
+  .user-item {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1 1 calc(33% - 20px); /* Ensures 3 users per row */
+    min-width: 200px; /* Prevents items from becoming too small */
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .logout-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  .logout-btn:hover {
+    background-color: #cc0000;
+  }
+  
+  

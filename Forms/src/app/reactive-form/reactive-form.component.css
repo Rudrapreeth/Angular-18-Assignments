@@ -1,0 +1,187 @@
+/*Container styling*/
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Heading*/
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/*Label styling*/
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+/*Input fields*/
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/*Error messages*/
+small {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/*Checkbox for hobbies*/
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.checkbox-label input {
+  cursor: pointer;
+}
+
+/* Submit Button - Primary Blue*/
+button {
+  width: 100%;
+  margin: 5px;
+  background-color: #007BFF; 
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:disabled {
+  background-color: #6C757D; 
+  cursor: not-allowed;
+}
+
+
+
+/*Reset Button*/
+.reset-btn {
+  background-color: #DC3545; 
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #C82333;
+}
+
+.reset-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/*Clear Button*/
+.clear-btn {
+  background-color: #DC3545;
+  margin: 5px;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: #C82333;
+}
+
+/*Add Hobby Button*/
+.add-hobby-btn {
+  background-color: #28A745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.add-hobby-btn:hover {
+  background-color: #218838;
+}
+
+/*Remove Hobby Button*/
+.remove-hobby-btn {
+  background-color: #FD7E14;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.remove-hobby-btn:hover {
+  background-color: #E66A00;
+}
+
+/*Notification Styling*/
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28A745; /* Bootstrap success green */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/*Hide notification smoothly*/
+.notification.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*Saved Users List*/
+h3 {
+  text-align: center;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}

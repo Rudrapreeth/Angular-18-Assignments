@@ -1,0 +1,77 @@
+<div class="container">
+  <h2>Template-driven Form (TD Form)</h2>
+
+  <!--Template-driven Form-->
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+    <div *ngIf="notification" class="notification">
+      {{ notification }}
+    </div>
+    <!--First Name Field-->
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" required #firstNameCtrl="ngModel">
+    <div *ngIf="firstNameCtrl.touched && firstNameCtrl.invalid">
+      <small *ngIf="firstNameCtrl.errors?.required">First Name is required.</small>
+    </div>
+
+    <!--Last Name Field-->
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" required #lastNameCtrl="ngModel">
+    <div *ngIf="lastNameCtrl.touched && lastNameCtrl.invalid">
+      <small *ngIf="lastNameCtrl.errors?.required">Last Name is required.</small>
+    </div>
+
+    <!--Email Field-->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="user.email" required email #emailCtrl="ngModel">
+    <div *ngIf="emailCtrl.touched && emailCtrl.invalid">
+      <small *ngIf="emailCtrl.errors?.required">Email is required.</small>
+      <small *ngIf="emailCtrl.errors?.email">Enter a valid email.</small>
+    </div>
+
+    <!--Age Field-->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" [(ngModel)]="user.age" min="18" required #ageCtrl="ngModel">
+    <div *ngIf="ageCtrl.touched && ageCtrl.invalid">
+      <small *ngIf="ageCtrl.errors?.required">Age is required.</small>
+      <small *ngIf="ageCtrl.errors?.min">Minimum age is 18.</small>
+    </div>
+
+
+    <!-- Buttons -->
+    <button class="submit-btn" [disabled]="userForm.invalid">Submit</button>
+    <div><br></div>
+    <button class="reset-btn" (click)="onReset(userForm)">Reset</button>
+    <button *ngIf="savedUsers.length > 0" (click)="onClearAll()" class="clear-btn">Clear All</button>
+
+
+    <!--Saved Users List-->
+    <h3>Saved Users: {{ savedUsers.length }}</h3>
+    <ul *ngIf="savedUsers.length > 0; else noUsers">
+      <li *ngFor="let user of savedUsers">
+        {{ user.firstName }} {{ user.lastName }} ({{ user.email }}, Age: {{ user.age }})
+      </li>
+    </ul>
+
+    <!--No users saved-->
+    <div>
+      <ng-template #noUsers>
+        <p>No users saved yet.</p>
+      </ng-template>
+    </div>
+
+    <!--Form State Display-->
+    <div>
+      <p>Form Valid: {{ userForm.valid }}</p>
+      <p>Form Invalid: {{ userForm.invalid }}</p>
+      <p>Form Dirty: {{ userForm.dirty }}</p>
+      <p>Form Pristine: {{ userForm.pristine }}</p>
+      <p>Form Touched: {{ userForm.touched }}</p>
+      <p>Form Untouched: {{ userForm.untouched }}</p>
+      <p>Form Disabled: {{ userForm.disabled }}</p>
+      <p>Form Enabled: {{ userForm.enabled }}</p>
+      <p>Form Value: {{ userForm.value | json }}</p>
+    </div>
+
+
+  </form>
+</div>

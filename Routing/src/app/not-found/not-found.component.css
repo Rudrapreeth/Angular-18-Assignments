@@ -1,0 +1,28 @@
+.not-found {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.not-found h1 {
+  font-size: 3rem;
+  color: #211919;
+}
+
+.not-found p {
+  font-size: 1.2rem;
+}
+
+.go-to-dashboard-btn {
+  padding: 10px 20px;
+  background-color: #211919;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.go-to-dashboard-btn:hover {
+  background-color: gray;
+}

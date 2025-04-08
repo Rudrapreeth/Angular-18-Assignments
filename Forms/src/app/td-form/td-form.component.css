@@ -1,0 +1,146 @@
+/*Container Styling*/
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/*Heading*/
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/*Label Styling*/
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+/*Input Fields*/
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/*Error Messages*/
+small {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+/*Submit Button - Blue*/
+.submit-btn {
+  width: 100%;
+  margin: 5px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submit-btn:disabled {
+  background-color: #007BFF;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+/*Reset Button - Orange*/
+.reset-btn {
+  width: 100%;
+  margin: 5px;
+  background-color: #FF9800;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reset-btn:hover {
+  background-color: #e68900;
+}
+
+.reset-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/*Clear Button-Red*/
+.clear-btn {
+  width: 100%;
+  margin: 5px;
+  background-color: #DC3545;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: darkred;
+}
+
+/*Notification Styling-Success Green*/
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #28A745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  z-index: 1000;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.notification.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*Saved Users List*/
+h3 {
+  text-align: center;
+  color: #444;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
