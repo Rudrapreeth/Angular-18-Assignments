@@ -5,31 +5,32 @@
 
 <!-- Usage of appUnless -->
 <p *appUnless="userCount === 0">
-    <em>Showing {{ userCount }} users</em>
+  <em>Showing {{ userCount }} users</em>
 </p>
 <p *appUnless="userCount !== 0">
-    <em>No users to display.</em>
+  <em>No users to display.</em>
 </p>
 <p *appUnless="userCount !== null && userCount > 10">
-    <strong>Less than 10 users</strong>
+  <strong>Less than 10 users</strong>
 </p>
-
 
 <button (click)="logout()" class="logout-btn">Logout</button>
 
 <div class="user-list">
-    <div class="user-item" *ngFor="let user of users$ | async" [ngClass]="{'high-salary': user.salary > 30000}"
-        appHoverHighlight [appTextColor]="user.salary > 30000 ? 'green' : 'red'">
+  <div class="user-item"
+       *ngFor="let user of users$ | async"
+       [ngClass]="{'high-salary': user.salary > 30000}"
+       appHoverHighlight
+       [appTextColor]="user.salary > 30000 ? 'green' : 'red'">
 
-        <span><strong>Name:</strong> {{ user.name | titlecase }}</span> |
-        <span><strong>Reversed:</strong> {{ user.name | reverse }}</span>
+    <span appNewUser="{{ user.joinedDate }}"><strong>Name:</strong> {{ user.name | titlecase }}</span> |
+    <span><strong>Reversed:</strong> {{ user.name | reverse }}</span>
 
-        <p>Salary: {{ user.salary | salaryFormat }}</p>
+    <p>Salary: {{ user.salary | salaryFormat }}</p>
 
-        <p *ngIf="user.joinedDate">
-            Joined: {{ user.joinedDate | date: 'longDate' }}
-        </p>
+    <p *ngIf="user.joinedDate">
+      Joined: {{ user.joinedDate | date: 'longDate' }}
+    </p>
 
-        <!-- <p>Salary: {{ user.salary | currency:'INR' }}</p> -->
-    </div>
+  </div>
 </div>

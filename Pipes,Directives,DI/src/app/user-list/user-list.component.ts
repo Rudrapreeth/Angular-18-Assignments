@@ -10,14 +10,14 @@ import { ReversePipe } from '../reverse.pipe';
 import { SalaryPipe } from '../salary.pipe';
 import { UnlessDirective } from '../directives/unless.directive';
 import { TextColorDirective } from '../directives/text-color.directive';
-
+import { NewUserDirective } from '../directives/app-new-user.directive';
 @Component({
   selector: 'app-user-list',
   standalone: true,
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css'],
   imports: [
-    CommonModule,FormsModule,ReversePipe,TitleCasePipe,SalaryPipe,HoverHighlightDirective,UnlessDirective,TextColorDirective
+    CommonModule,FormsModule,ReversePipe,TitleCasePipe,SalaryPipe,HoverHighlightDirective,UnlessDirective,TextColorDirective,NewUserDirective
   ]
 })
 export class UserListComponent {
