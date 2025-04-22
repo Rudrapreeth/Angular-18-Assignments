@@ -1,0 +1,36 @@
+/* Optional basic styling */
+h1 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    padding: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    margin-right: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  

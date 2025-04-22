@@ -1,0 +1,32 @@
+/* header.component.css */
+.app-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+  
+  .app-header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .app-header nav ul li {
+    padding: 5px 10px;
+  }
+  
+  .app-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .app-header nav ul li a:hover {
+    color: #00bcd4;  /* A hover effect for the links */
+  }
+  
+  .app-header nav ul li a.active {
+    border-bottom: 2px solid #00bcd4;  /* Highlight active link */
+  }
+  

@@ -1,0 +1,33 @@
+<h1>Task Manager</h1>
+
+<!-- Task Form -->
+<form (submit)="onSubmit()" style="margin-bottom: 1rem;">
+  <input
+    type="text"
+    [(ngModel)]="taskForm.title"
+    name="title"
+    required
+    placeholder="Enter task title"
+  />
+
+  <div style="margin: 1rem 0;">
+    <label for="filter">Filter Tasks:</label>
+    <select id="filter" [(ngModel)]="taskFilter" (ngModelChange)="applyFilter()" name="filter">
+      <option value="all">All</option>
+      <option value="completed">Completed</option>
+      <option value="incomplete">Incomplete</option>
+    </select>
+  </div>
+
+  <button type="submit">{{ isEditMode ? 'Update' : 'Add' }} Task</button>
+</form>
+
+<!-- Task List -->
+<ul>
+  <li *ngFor="let task of filteredTasks">
+    {{ task.title }} - {{ task.completed ? '✔️' : '❌' }}
+    <button (click)="toggleCompletion(task)">Toggle</button>
+    <button (click)="editTask(task)">Edit</button>
+    <button (click)="deleteTask(task.id)">Delete</button>
+  </li>
+</ul>
