@@ -1,0 +1,6 @@
+[
+  { "team": "Red Bull", "driver": "Verstappen", "position": 1 },
+  { "team": "Mercedes", "driver": "Hamilton", "position": 2 },
+  { "team": "Ferrari", "driver": "Leclerc", "position": 3 },
+  { "team": "McLaren", "driver": "Norris", "position": 4 }
+]
