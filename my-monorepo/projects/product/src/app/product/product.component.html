@@ -1,0 +1,30 @@
+<h2>🛒 Product Page (Remote)</h2>
+<p>Here are some great accessories for your next flight!</p>
+
+<div class="product-list">
+  <div *ngFor="let product of products" class="product-item">
+    <img [src]="product.image" alt="{{ product.name }}" />
+    <div class="product-details">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+      <p><strong>₹{{ product.price }}</strong></p>
+      <button (click)="toggleCart(product)">
+        {{ isInCart(product) ? 'Remove from Cart' : 'Add to Cart' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- 🛍️ Cart Section -->
+<div class="cart" *ngIf="cart.length > 0">
+  <h3>🛍️ Your Cart</h3>
+  <ul>
+    <li *ngFor="let item of cart">
+      {{ item.product.name }} - ₹{{ item.product.price }} x {{ item.quantity }}
+      <button (click)="incrementQuantity(item)">+</button>
+      <button (click)="decrementQuantity(item)">-</button>
+      <button (click)="removeFromCart(item)" class="remove-btn">Remove</button>
+    </li>
+  </ul>
+  <p><strong>Total: ₹{{ totalPrice }}</strong></p>
+</div>

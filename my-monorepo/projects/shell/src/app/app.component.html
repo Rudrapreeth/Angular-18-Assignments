@@ -1,0 +1,9 @@
+<nav>
+  <button (click)="showComponent('product')">Product</button>
+  <button (click)="showComponent('flight')">Flight</button>
+</nav>
+
+<app-product *ngIf="activeComponent === 'product'"></app-product>
+<app-flight *ngIf="activeComponent === 'flight'"></app-flight>
+
+

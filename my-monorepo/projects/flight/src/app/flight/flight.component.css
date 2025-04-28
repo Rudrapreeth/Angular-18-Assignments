@@ -1,0 +1,52 @@
+h1 {
+  margin-bottom: 1rem;
+  color: #1a237e;
+}
+
+.flight-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.flight-card {
+  flex: 1 1 300px;
+  background-color: #f5faff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.flight-card:hover {
+  transform: translateY(-4px);
+  background-color: #e0f7ff;
+}
+
+.flight-info h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0d47a1;
+}
+
+.flight-info p {
+  margin: 4px 0;
+  color: #333;
+}
+
+.details {
+  border: 2px dashed #90caf9;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f1f8ff;
+}
+
+.details h2 {
+  color: #1565c0;
+}
+
+.details p {
+  margin: 0.5rem 0;
+}
